@@ -69,7 +69,7 @@ class Store {
       options
     } = unifyObjectStyle(_type, _payload, _options)
 
-    const mutation = { type, payload }
+    const mutation = { type, payload, options }
     const entry = this._mutations[type]
     if (!entry) {
       console.error(`[vuex] unknown mutation type: ${type}`)
